@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html>
+<title>Echinonet/OliverLab</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+<link rel="stylesheet" href="http://www.w3schools.com/lib/w3-theme-black.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<body id="myPage">
+
+<!-- Side Navigation on click -->
+<!--<nav class="w3-sidenav w3-white w3-card-2 w3-animate-left" style="display:none;z-index:2" id="mySidenav">-->
+    <!--<a href="javascript:void(0)" onclick="w3_close()" class="w3-closenav w3-xxxlarge w3-text-teal">Close-->
+        <!--<i class="fa fa-remove"></i>-->
+    <!--</a>-->
+    <!--<a href="#">Link 1</a>-->
+    <!--<a href="#">Link 2</a>-->
+    <!--<a href="#">Link 3</a>-->
+    <!--<a href="#">Link 4</a>-->
+    <!--<a href="#">Link 5</a>-->
+<!--</nav>-->
+
+<!-- Navbar -->
+<div class="w3-top">
+    <ul class="w3-navbar w3-theme-d2 w3-left-align">
+        <li class="w3-hide-medium w3-hide-large w3-opennav w3-right">
+            <a class="w3-hover-white w3-theme-d2" href="javascript:void(0);" onclick="openNav()"><i class="fa fa-bars"></i></a>
+        </li>
+        <li><a href="#" class="w3-light-green"><i class="fa fa-home w3-margin-right"></i>OliveriLab</a></li>
+        <li class="w3-hide-small"><a href="#research" class="w3-hover-white">Research</a></li>
+        <li class="w3-hide-small"><a href="#people" class="w3-hover-white">People</a></li>
+        <li class="w3-hide-small"><a href="#tools" class="w3-hover-white">Tools</a></li>
+        <li class="w3-hide-small"><a href="publications.html#publications" class="w3-hover-white">Publications</a></li>
+        <li class="w3-hide-small"><a href="#links" class="w3-hover-white">Links</a></li>
+        <li class="w3-hide-small"><a href="#contact" class="w3-hover-white">Contact</a></li>
+        <li class="w3-hide-small w3-right"><a href="#" class="w3-hover-teal" title="Search"><i class="fa fa-search"></i></a></li>
+    </ul>
+
+    <!-- Navbar on small screens -->
+    <div id="navDemo" class="w3-hide w3-hide-large w3-hide-medium">
+        <ul class="w3-navbar w3-left-align w3-theme">
+            <li><a href="#people">People</a></li>
+            <li><a href="#research">Research</a></li>
+            <li><a href="#tools">Tools</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="#">Search</a></li>
+        </ul>
+    </div>
+</div>
+
+<!-- Image Header -->
+<div class="w3-display-container w3-animate-opacity">
+    <!-- Automatic Slideshow Images -->
+    <!--@Jeff: Here you have to add divs in case you want to include more pictures. There is porbably a smareter way of doing this using some type -->
+
+    <!--<?php-->
+        <!--$dirname = "images/";-->
+        <!--$images = scandir($dirname);-->
+        <!--shuffle($images);-->
+        <!--$ignore = Array(".", "..");-->
+        <!--foreach($images as $curimg){-->
+            <!--if(!in_array($curimg, $ignore)) {-->
+                <!--echo "$dirname.$curimg"-->
+                <!--echo "<div class="mySlides w3-display-container w3-center"><li><a href='".$dirname.$curimg."'><img src='img.php?src=".$dirname.$curimg."&w=300&zc=1' alt='' /></a></li><div class="w3-container w3-display-bottomleft w3-margin-bottom"><button onclick="document.getElementById('id01').style.display='block'" class="w3-btn w3-xlarge w3-theme w3-hover-teal" title="Sea urchin">OliveriLab</button></div></div> ";-->
+            <!--}-->
+        <!--}-->
+    <!--?>-->
+    <div class="mySlides w3-display-container w3-center">
+        <img src="images/6.jpg" alt="boat" style="width:100%;min-height:350px;max-height:600px;">
+        <div class="w3-container w3-display-bottomleft w3-margin-bottom">
+            <button onclick="document.getElementById('id01').style.display='block'" class="w3-btn w3-xlarge w3-theme w3-hover-teal" title="Sea urchin">OliveriLab</button>
+        </div>
+    </div>
+    <div class="mySlides w3-display-container w3-center">
+        <img src="images/1.jpg" alt="boat" style="width:100%;min-height:350px;max-height:600px;">
+        <div class="w3-container w3-display-bottomleft w3-margin-bottom">
+            <button onclick="document.getElementById('id01').style.display='block'" class="w3-btn w3-xlarge w3-theme w3-hover-teal" title="Sea urchin">OliveriLab</button>
+        </div>
+    </div>
+    <div class="mySlides w3-display-container w3-center">
+        <img src="images/2.jpg" alt="boat" style="width:100%;min-height:350px;max-height:600px;">
+        <div class="w3-container w3-display-bottomleft w3-margin-bottom">
+            <button onclick="document.getElementById('id01').style.display='block'" class="w3-btn w3-xlarge w3-theme w3-hover-teal" title="Sea urchin">OliveriLab</button>
+        </div>
+    </div>
+    <div class="mySlides w3-display-container w3-center">
+        <img src="images/3.jpg" alt="boat" style="width:100%;min-height:350px;max-height:600px;">
+        <div class="w3-container w3-display-bottomleft w3-margin-bottom">
+            <button onclick="document.getElementById('id01').style.display='block'" class="w3-btn w3-xlarge w3-theme w3-hover-teal" title="Sea urchin">OliveriLab</button>
+        </div>
+    </div>
+</div>
+
+<!-- Modal -->
+<!--<div id="id01" class="w3-modal">-->
+    <!--<div class="w3-modal-content w3-card-8 w3-animate-top">-->
+        <!--<header class="w3-container w3-teal">-->
+            <!--<span onclick="document.getElementById('id01').style.display='none'" class="w3-closebtn"><i class="fa fa-remove"></i></span>-->
+            <!--<h4>Oh snap! We just showed you a modal..</h4>-->
+            <!--<h5>Because we can <i class="fa fa-smile-o"></i></h5>-->
+        <!--</header>-->
+        <!--<div class="w3-container">-->
+            <!--<p>Cool huh? Ok, enough teasing around..</p>-->
+            <!--<p>Go to our <a class="w3-btn" href="/w3css/default.asp">W3.CSS Tutorial</a> to learn more!</p>-->
+        <!--</div>-->
+        <!--<footer class="w3-container w3-teal">-->
+            <!--<p>Modal footer</p>-->
+        <!--</footer>-->
+    <!--</div>-->
+<!--</div>-->
+
+<!-- Research Row -->
+<div class="w3-row-padding w3-padding-64 w3-theme-l1" id="research">
+
+    <div class="w3-quarter">
+        <h2>Our Research</h2>
+        <p>The main goal of the OliveriLab is to decipher gene regulatory networks (GRN) in development and regeneration of living systems. For this purpose echinoderms are used as model. Echinoderms are perfectly suited because they consist of 5 big classes, have distinct larval stages of which only the echinoids and ophiuroids form a larval skeleton. Importantly, the formation of a larval skeleton has the best described developmental GRN for the sea urchin Strongyloncentrotus purpuratus and allows comparative analysis with other classes.</p>
+    </div>
+
+    <div class="w3-quarter">
+        <div class="w3-card-2 w3-grey w3-hover-light-green">
+            <img src="images/spu_apical.png" alt="Strongyloncentrotus purpuratus apical organ" style="width:100%">
+            <div class="w3-container">
+                <p>Sea Urchin Development</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="w3-quarter">
+        <div class="w3-card-2 w3-grey w3-hover-light-green">
+            <img src="images/afi_dev.png" alt="Amphiura filifromis development" style="width:100%">
+            <div class="w3-container">
+                <p>Brittle Star Development</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="w3-quarter">
+        <div class="w3-card-2 w3-grey w3-hover-light-green">
+            <img src="images/afi_reg.png" alt="Amphiura filifromis regeneration" style="width:100%">
+            <div class="w3-container">
+                <p>Brittle Star Regeneration</p>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<!-- Team Container -->
+<div class="w3-container w3-padding-64 w3-center" id="people">
+    <h2>PEOPLE</h2>
+    <p>Meet the team - our Lab rats:</p>
+
+    <div class="w3-row"><br>
+
+        <div class="w3-quarter">
+            <img src="images/POLIV35.jpg" alt="Boss" style="width:45%" class="w3-circle w3-hover-opacity">
+            <h3>Paola Oliveri</h3>
+            <p>Senior Lecturer / PI</p>
+        </div>
+
+        <div class="w3-quarter">
+            <img src="images/natalie_woods.jpeg" alt="Phd" style="width:45%" class="w3-circle w3-hover-opacity">
+            <h3>Natalie Woods</h3>
+            <p>PhD Student</p>
+        </div>
+
+        <div class="w3-quarter">
+            <img src="images/annaczarkwiani.jpg" alt="Phd" style="width:45%" class="w3-circle w3-hover-opacity">
+            <h3>Anna Czarkwiani</h3>
+            <p>PhD Student</p>
+        </div>
+
+        <div class="w3-quarter">
+            <!--<img src="images/annaczarkwiani.jpg" alt="Boss" style="width:45%" class="w3-circle w3-hover-opacity">-->
+            <h3>Former Lab members</h3>
+            <p>David Dylus (UNIL)</p>
+            <p>Libero Petrone</p>
+            <p>Avi Lerner</p>
+        </div>
+
+    </div>
+</div>
+
+
+<!-- Container -->
+<div class="w3-container" style="position:relative">
+    <a onclick="w3_open()" class="w3-btn-floating-large w3-teal" style="position:absolute;top:-28px;right:24px;z-index:0;">
+        <i class="fa fa-plus"></i></a>
+</div>
+
+<!-- Tools Row -->
+<!--<div class="w3-row-padding w3-center w3-padding-64" id="tools">-->
+    <!--<h2>TOOLS</h2>-->
+    <!--<p>Tools to work with Amphiura filiformis!</p><br>-->
+    <!--<div class="w3-half w3-margin-bottom">-->
+        <!--<a href="http://www.echinonet.eu/blast/" target="_blank">-->
+        <!--<ul class="w3-ul w3-border w3-hover-shadow">-->
+            <!--<li class="w3-theme">-->
+                <!--<p class="w3-xlarge">Blast</p>-->
+            <!--</li>-->
+            <!--<div class="w3-card-2 w3-white">-->
+                <!--<img src="images/blast.png" alt="Monterosso" style="width:100%">-->
+                <!--<div class="w3-container">-->
+                <!--</div>-->
+            <!--</div>-->
+            <!--</li>-->
+        <!--</ul>-->
+        <!--</a>-->
+    <!--</div>-->
+
+    <!--<div class="w3-half w3-margin-bottom">-->
+        <!--<a href="http://www.echinonet.eu/shiny/Amphiura_filiformis/" target="_blank">-->
+        <!--<ul class="w3-ul w3-border w3-hover-shadow">-->
+            <!--<li class="w3-theme">-->
+                <!--<p class="w3-xlarge">Transcriptome</p>-->
+            <!--</li>-->
+            <!--<div class="w3-card-2 w3-white">-->
+                <!--<img src="images/transcriptome.png" alt="Monterosso" style="width:100%">-->
+                <!--<div class="w3-container">-->
+                <!--</div>-->
+            <!--</div>-->
+            <!--</li>-->
+        <!--</ul>-->
+        <!--</a>-->
+    <!--</div>-->
+
+<!--</div>-->
+
+<!-- Container -->
+<div class="w3-container" style="position:relative">
+    <a onclick="w3_open()" class="w3-btn-floating-large w3-teal" style="position:absolute;top:-28px;right:24px;z-index:0;">
+        <i class="fa fa-plus"></i></a>
+</div>
+
+<!-- Tools Row -->
+<div class="w3-row-padding w3-center w3-padding-64" id="publications">
+    <h2>TOOLS</h2>
+    <p>Tools to work with the brittle star Amphiura filiformis!</p><br>
+    <div class="w3-half w3-margin-bottom">
+        <a href="http://www.echinonet.eu/blast/" target="_blank">
+            <ul class="w3-ul w3-border w3-hover-shadow">
+                <li class="w3-theme">
+                    <p class="w3-xlarge">Blast</p>
+                </li>
+                <div class="w3-card-2 w3-white">
+                    <img src="images/blast.png" alt="Monterosso" style="width:100%">
+                    <div class="w3-container">
+                    </div>
+                </div>
+                </li>
+            </ul>
+        </a>
+    </div>
+
+    <div class="w3-half w3-margin-bottom">
+        <a href="http://www.echinonet.eu/shiny/Amphiura_filiformis/" target="_blank">
+            <ul class="w3-ul w3-border w3-hover-shadow">
+                <li class="w3-theme">
+                    <p class="w3-xlarge">Transcriptome</p>
+                </li>
+                <div class="w3-card-2 w3-white">
+                    <img src="images/transcriptome.png" alt="Monterosso" style="width:100%">
+                    <div class="w3-container">
+                    </div>
+                </div>
+                </li>
+            </ul>
+        </a>
+    </div>
+
+</div>
+
+<!-- Contact Container -->
+<div class="w3-container w3-padding-64 w3-theme-l5" id="contact">
+    <div class="w3-row">
+        <div class="w3-col m5">
+            <div class="w3-padding-16"><span class="w3-xlarge w3-border-teal w3-bottombar">Contact Us</span></div>
+            <h3>Address</h3>
+            <i class="fa fa-map-marker w3-text-teal w3-xlarge"></i> University College London<br>
+            GEE & CDB Departments<br>
+            Gower Street<br>
+            WC1E 6BT London, UK
+            <p><i class="fa fa-envelope-o w3-text-teal w3-xlarge"></i> p.oliveri at ucl.ac.uk</p>
+        </div>
+        <div class="w3-col m7">
+            <form class="w3-container w3-card-4 w3-padding-16 w3-white" method="POST" action="email.php" target="_blank">
+                <div class="w3-group">
+                    <label class="w3-label">Name</label>
+                    <input class="w3-input" type="text" name="name" required>
+                </div>
+                <div class="w3-group">
+                    <label class="w3-label">Email</label>
+                    <input class="w3-input" type="text" name="email" required>
+                </div>
+                <div class="w3-group">
+                    <label class="w3-label">Message</label>
+                    <input class="w3-input" type="text" name="message" required>
+                </div>
+                <input class="w3-check" type="checkbox" checked name="Like">
+                <label class="w3-validate">I Like it!</label>
+                <button type="submit" class="w3-btn w3-right w3-theme">Send</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+<!-- Add Google Maps -->
+<div id="googleMap" style="height:400px;filter:grayscale(90%);-webkit-filter:grayscale(90%);"></div>
+<script>
+    function initMap() {
+        var myCenter = new google.maps.LatLng(51.524153, -0.134160);
+        var mapProp = {
+            center: myCenter,
+            zoom: 17,
+            scrollwheel: false,
+            draggable: false,
+            mapTypeId: google.maps.MapTypeId.ROADMAP
+        };
+
+        var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
+
+        var marker = new google.maps.Marker({
+            position: myCenter,
+            map: map
+        });
+
+        marker.setMap(map);
+    }
+    //google.maps.event.addDomListener(window, 'load', initialize);
+</script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
+<script async src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB4uJpjvujXVCIWtmL0qfgRinskE99UN6I&callback=initMap" type="text/javascript" defer></script>
+<!-- Footer -->
+<!--<footer class="w3-container w3-padding-32 w3-theme-d1 w3-center">-->
+    <!--<h4>Follow Us</h4>-->
+    <!--<a class="w3-btn-floating w3-teal" href="javascript:void(0)" title="Facebook"><i class="fa fa-facebook"></i></a>-->
+    <!--<a class="w3-btn-floating w3-teal" href="javascript:void(0)" title="Twitter"><i class="fa fa-twitter"></i></a>-->
+    <!--<a class="w3-btn-floating w3-teal" href="javascript:void(0)" title="Google +"><i class="fa fa-google-plus"></i></a>-->
+    <!--<a class="w3-btn-floating w3-teal" href="javascript:void(0)" title="Google +"><i class="fa fa-instagram"></i></a>-->
+    <!--<a class="w3-btn-floating w3-teal w3-hide-small" href="javascript:void(0)" title="Linkedin"><i class="fa fa-linkedin"></i></a>-->
+    <!--<p>Powered by <a href="http://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a> and designed by David Dylus</p>-->
+
+    <!--<div style="position:relative;bottom:100px;z-index:1;" class="w3-tooltip w3-right">-->
+        <!--<span class="w3-text w3-padding w3-teal w3-hide-small">Go To Top</span>-->
+        <!--<a class="w3-btn w3-theme" href="#myPage"><span class="w3-xlarge">-->
+    <!--<i class="fa fa-chevron-circle-up"></i></span></a>-->
+    <!--</div>-->
+<!--</footer>-->
+
+<!-- Script For Side Navigation -->
+<script>
+    // Automatic Slideshow - change image every 4 seconds
+    var myIndex = 0;
+    carousel();
+
+    function carousel() {
+        var i;
+        var x = document.getElementsByClassName("mySlides");
+        for (i = 0; i < x.length; i++) {
+            x[i].style.display = "none";
+        }
+        myIndex++;
+        if (myIndex > x.length) {myIndex = 1}
+        x[myIndex-1].style.display = "block";
+        setTimeout(carousel, 4000);
+    }
+
+    function w3_open() {
+        var x = document.getElementById("mySidenav");
+        x.style.width = "300px";
+        x.style.textAlign = "center";
+        x.style.fontSize = "40px";
+        x.style.paddingTop = "10%";
+        x.style.display = "block";
+    }
+    function w3_close() {
+        document.getElementById("mySidenav").style.display = "none";
+    }
+
+</script>
+
+</body>
+</html>
